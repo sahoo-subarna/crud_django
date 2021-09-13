@@ -31,4 +31,16 @@ python3 manage.py migrate
 
 # GIT Commands -:
 
- git clone https://github.com/subarna-sahoo/task_project.git
+ git clone https://github.com/subarna-acs/crud_django.git
+ 
+ git init
+ 
+ git status
+ 
+ git add .
+ 
+ git commit -m "commit message"
+
+ git push origin main
+ 
+ 
