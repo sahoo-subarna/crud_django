@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1>HOME</h1>
+    
+
+    <h3 style="color: brown;">    {{msg}} </h3>
+
+    <br>
+
+
+    <!-- route to a new Page -->
+   <a href="{% url 'add_new_task' %}">  Add a New Task here </a> 
+
+
+
+<div style="background-color: cornsilk;">
+
+    <ol>
+        {% for task in tasks %}
+            <div style="background-color: darkcyan;">
+                <li>{{task}}</li>  
+                
+                <!-- Update Task -->
+                <button>
+                    <a href="{% url 'update_task' task.id %}"> Edit </a>
+                </button>
+                
+                <!-- Delete Task -->
+                <a href="{% url 'delete_task' task.id %}">
+                    <button>
+                        Delete
+                    </button>
+                </a>
+            </div>
+            <br>
+        {% endfor %}
+    </ol>
+
+
+</div>
+    
+</body>
+</html>
